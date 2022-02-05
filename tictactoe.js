@@ -4,7 +4,7 @@ let activePlayer = 'X' ;
 let selectSquares = [];
 
 //This function is for placing an x or o in a square.
-function placeXOro(squareNumber) {
+function placeXOrO(squareNumber) {
     //This  condition ensures a square hasn't been selected already.
     //The .some() method is used to check each element of selectedSquare array
     //to see if it contains the square number clicked on.
@@ -18,7 +18,7 @@ function placeXOro(squareNumber) {
             //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             //If activePlayer is equal to 'O', the o.png is placed in HTML.
-            select.style.backgroundImage ] 'url("images/o.png")';
+            select.style.backgroundImage = 'url("images/o.png")';
         }
         //squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -58,9 +58,9 @@ function placeXOro(squareNumber) {
             //A random number between 0 and 8 is selected.
             pickASquare = String(Math.floor(Math.random() * 9));
             //If the random number evaluated returns true, the square hasn't been selected already.
-            if (placeXOro(pickASquare)){
+            if (placeXOrO(pickASquare)){
                 //This line calls the function.
-                placeXOro(pickASquare);
+                placeXOrO(pickASquare);
                 //This change our boolean and ends the loop.
                 success = true;
             };
