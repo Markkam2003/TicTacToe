@@ -1,7 +1,7 @@
 //This variable keeps track of whose turn it is.
 let activePlayer = 'X' ;
 //This array stores an array of moves. We use this to determine win conditions.
-let selectSquares = [];
+selectedSquares = [];
 
 //This function is for placing an x or o in a square.
 function placeXOrO(squareNumber) {
