@@ -1,7 +1,7 @@
 //This variable keeps track of whose turn it is.
 let activePlayer = 'X' ;
 //This array stores an array of moves. We use this to determine win conditions.
-selectedSquares = [];
+let selectedSquares = [];
 
 //This function is for placing an x or o in a square.
 function placeXOrO(squareNumber) {
@@ -14,7 +14,7 @@ function placeXOrO(squareNumber) {
         //This condition checks who's turn it is.
         if (activePlayer === 'X') {
             //If activePlayer is equal to 'X', the x.png is placed in HTML.
-            select.style.backgroundImage = 'url("images/o.png")';
+            select.style.backgroundImage = 'url("images/x.png")';
             //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             //If activePlayer is equal to 'O', the o.png is placed in HTML.
@@ -69,7 +69,7 @@ function placeXOrO(squareNumber) {
 }
 //This function parses the selectedSquares array to search for win conditions.
 //drawWinLine function is called to draw line if condition is met.
-function checkWinConditions() {
+function checkWinConditions () {
     // X 0, 1, 2 condition.
     if      (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100) }
     // X 3, 4, 5 condition.
@@ -108,7 +108,7 @@ function checkWinConditions() {
          //This function playes the tie game sound.
          audio('./media/tie.mp3');
          // This function sets a .3 second timer before the resetGame is called.
-         setTimeout(function () { resetgame(); }, 1000);
+         setTimeout(function () { resetGame(); }, 1000);
      }
 
 
@@ -217,7 +217,7 @@ animateLineDrawing();
 setTimeout(function () { clear(); resetGame(); }, 1000);
 }
 //This function resets the game in the event of a tie or a win.
-function resetGame() {
+function resetGame () {
     //This for loop iterates through each HTML sqaure element
     for (let i = 0; i < 9; i++) {
         //This variable gets the html element of i.
