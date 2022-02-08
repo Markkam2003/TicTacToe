@@ -1,5 +1,5 @@
 //This variable keeps track of whose turn it is.
-let activePlayer = 'X' ;
+let activePlayer = 'X';
 //This array stores an array of moves. We use this to determine win conditions.
 let selectedSquares = [];
 
@@ -171,7 +171,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This method moves us to a starting point for our line.
         c.moveTo(x1, y1)
         // This method indicates the end point in our line.
-        c.lineTo(x,y)
+        c.lineTo(x, y)
         //This method sets the width of our line.
         c.lineWidth = 10;
         //This method sets the color of our line.
@@ -198,7 +198,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
 }
 
 
-//This function clears our canvas after our win line is drwn.
+//This function clears our canvas after our win line is drawn.
 function clear() {
     //This line starts our animation loop.
     const animationLoop = requestAnimationFrame(clear);
